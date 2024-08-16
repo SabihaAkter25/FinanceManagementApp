@@ -1,4 +1,5 @@
 import 'package:finance_management_app/view/login/welcome_view.dart';
+import 'package:finance_management_app/view/main_tabview/main_tab_view.dart';
 import 'package:flutter/material.dart';
 
 import 'common/colour_extension.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home:const WelcomeView(),
+      home:const MainTabView(),
     );
   }
 }

@@ -17,7 +17,7 @@ class TColor{
 
   static Color get gray => const Color(0xf2460707);
   static Color get gray80 => const Color(0xf25e0f0f);
-  static Color get gray70 => const Color(0xf2751515);
+  static Color get gray70 => const Color(0x51776E6E);
   static Color get gray60 => const Color(0xf2932222);
   static Color get gray50 => const Color(0xf2c74646);
   static Color get gray40 => const Color(0xf2c46262);

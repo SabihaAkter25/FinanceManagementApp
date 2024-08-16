@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  curved_navigation_bar: ^1.0.3
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -64,6 +65,12 @@ flutter:
       - assets/images/Untitled_design_6_-removebg-preview.png
       - assets/images/gettyimages-1063758830-640x640.jpg
       - assets/images/Untitled design(7).png
+      - assets/images/3D-spotify-logo-premium-PNG.png
+      - assets/images/imyou tube premimum logo.png
+      - assets/images/Netflix logo.png
+      - assets/images/png-transparent-logo-onedrive.png
+      - assets/images/_FRESH_FOODS_-removebg-preview.png
+  ##
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

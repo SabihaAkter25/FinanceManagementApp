@@ -1,6 +1,7 @@
 import 'package:finance_management_app/common_widget/primary_button.dart';
 import 'package:finance_management_app/view/login/sign_up_view.dart';
 import 'package:flutter/material.dart';
+import '../../common/colour_extension.dart';
 import '../../common_widget/round_textfield.dart';
 import '../../common_widget/secondary_button.dart';
 
@@ -46,7 +47,7 @@ class _SocialLoginState extends State<SignInView> {
               ),
               const SizedBox(height: 150), // Replacing Spacer with SizedBox
               RoundTextField(
-                title: 'Email Address',
+                title: 'Log in',
                 controller: txtEmail,
                 keyboardType: TextInputType.emailAddress,
               ),
@@ -60,11 +61,15 @@ class _SocialLoginState extends State<SignInView> {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextButton(
-                    onPressed: () {  },
-                    child: const Row(
+                    onPressed: () {
+                      setState(() {
+                        isRemember = !isRemember;
+                      });
+                    },
+                    child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Icon(Icons.check_box),
+                       Icon(isRemember?  Icons.check_box_rounded : Icons.check_box_outline_blank_rounded,size: 15,color: TColor.gray50, )
                       ],
                     )
                   ),
@@ -73,7 +78,7 @@ class _SocialLoginState extends State<SignInView> {
                   TextButton(
                     onPressed: () {  },
                     child: Text(
-                      "Forgot password?",
+                      "Remember me",
                       style: TextStyle(
                         color: Colors.grey.shade700,
                         fontSize: 16,
@@ -88,7 +93,7 @@ class _SocialLoginState extends State<SignInView> {
                 onPressed: () {},
                 FontSize: 24,
               ),
-              const SizedBox(height: 10 ), // Replacing Spacer with SizedBox
+              const SizedBox(height: 140 ), // Replacing Spacer with SizedBox
               const Text(
                 "If you don't have an account",
                 textAlign: TextAlign.center,

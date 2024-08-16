@@ -105,7 +105,7 @@ class _SocialLoginState extends State<SignUpView> {
                 onPressed: () {},
                 FontSize: 24,
               ),
-              const SizedBox(height: 10 ), // Replacing Spacer with SizedBox
+              const SizedBox(height: 100 ), // Replacing Spacer with SizedBox
               const Text(
                 "Do you already have an account?",
                 textAlign: TextAlign.center,
