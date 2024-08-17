@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../common/colour_extension.dart';
 import '../../common_widget/coming_bill_row.dart';
 import '../../common_widget/custom_arc_painter.dart';
@@ -53,7 +52,7 @@ class _HomeViewState extends State<HomeView> {
                     width: media.width * 1.1, // Example width
                     height: media.width * 1.0, // Example height
                     child: CustomPaint(
-                      painter: CustomArcPainter(),
+                      painter: CustomArcPainter(end: 220),
                     ),
                   ),
 

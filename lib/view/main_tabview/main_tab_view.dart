@@ -1,9 +1,8 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../common/colour_extension.dart';
 import '../home/home_view.dart';
+import '../spending_budget/spending_budget_view.dart';
 
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});
@@ -40,7 +39,7 @@ class _MainTabViewState extends State<MainTabView> {
                          height: 65,
                          width: 400,
                          decoration: BoxDecoration(
-                           color: Colors.grey,
+                           color: Colors.grey.shade800,
                            borderRadius: BorderRadius.circular(15),
                          ),
                          child: Row(
@@ -59,7 +58,7 @@ class _MainTabViewState extends State<MainTabView> {
                              IconButton(onPressed: (){
                                setState(() {
                                  selectTab =1;
-                                 currentTabView = Container();
+                                 currentTabView = const SpendingBudgetView();
                                });
 
                              },
@@ -99,7 +98,7 @@ class _MainTabViewState extends State<MainTabView> {
                      child: Container(
                        margin: EdgeInsets.symmetric(vertical: 30),
                        child: Icon(Icons.radio_button_checked_outlined,size: 70,
-                       color: Colors.white,
+                       color: Colors.blueGrey.shade200,
                        ),
                        decoration: BoxDecoration(
                          boxShadow: [BoxShadow(
