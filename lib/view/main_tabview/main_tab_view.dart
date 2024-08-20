@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../common/colour_extension.dart';
+import '../calender/calender_view.dart';
 import '../home/home_view.dart';
 import '../spending_budget/spending_budget_view.dart';
 
@@ -67,7 +68,7 @@ class _MainTabViewState extends State<MainTabView> {
                              IconButton(onPressed: (){
                                setState(() {
                                  selectTab =2;
-                                 currentTabView = Container();
+                                 currentTabView = const CalenderView();
                                });
 
                              },

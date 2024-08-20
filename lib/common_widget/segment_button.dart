@@ -13,11 +13,12 @@ class SegmentButton extends StatelessWidget {
       child: Container(
         decoration:isActive? BoxDecoration(
           border: Border.all(
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.white.withOpacity(0.3),
           ),
-          color: Colors.black,
+          color: Colors.grey.shade800,
           borderRadius: BorderRadius.circular(25),
-        ) : null,
+        )
+            : null,
         alignment: Alignment.center,
         child: Text(
           title,
