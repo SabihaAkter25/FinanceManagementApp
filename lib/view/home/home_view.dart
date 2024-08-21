@@ -17,7 +17,7 @@ class _HomeViewState extends State<HomeView> {
   bool isSubcription =true;
   List subArr = [
     {"Name":"Spotify","icon":"assets/images/3D-spotify-logo-premium-PNG.png","Price": "5.99"},
-    {"Name":"YouTube Premium","icon":"assets/images/imyou tube premimum logo.png","Price": "19.88"},
+    {"Name":"YouTube Premium","icon":"assets/images/yt.jpeg","Price": "19.88"},
     {"Name":"Microsoft OneDrive","icon":"assets/images/png-transparent-logo-onedrive.png","Price": "29.99"},
     {"Name":"NetFlix","icon":"assets/images/Netflix logo.png","Price": "15.00"},
   ];
