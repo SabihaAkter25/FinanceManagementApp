@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
 
 class RoundTextField extends StatelessWidget {
-  const RoundTextField({super.key, required this.title,  this.controller, required this.keyboardType,  this.obscureText=false });
+  const RoundTextField({super.key, required this.title,  this.controller,  this.keyboardType,  this.obscureText=false, required this.textAlign });
 final String title;
 final TextEditingController? controller;
-final TextInputType keyboardType;
+final TextInputType? keyboardType;
+final TextAlign textAlign;
 final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return   Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Row(children: [
+          Expanded(child:Text(
+              title,
+              textAlign:textAlign ,
+              style: TextStyle( color:Colors.grey.shade700 , fontSize: 16)),
+          )
+        ],),
 
         Text(title,style: TextStyle( color:Colors.grey.shade700 , fontSize: 16)),
         const SizedBox(height: 10),

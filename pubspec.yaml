@@ -41,6 +41,7 @@ dependencies:
     git:
       url:  https://github.com/sud0su/calendar_agenda
       ref: main
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +80,10 @@ flutter:
       - assets/images/entertainment.jpeg
       - assets/images/security_logo.jpeg
       - assets/images/transport logo.jpeg
+      - assets/images/HBO-Go-romania-886x590.jpg
+      - assets/images/yt.jpeg
+      - assets/images/plus2.jpeg
+      - assets/images/Minus2.png
   ##
   #   - images/a_dot_ham.jpeg
 

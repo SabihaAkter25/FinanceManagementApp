@@ -49,13 +49,13 @@ class _SocialLoginState extends State<SignInView> {
               RoundTextField(
                 title: 'Log in',
                 controller: txtEmail,
-                keyboardType: TextInputType.emailAddress,
+                keyboardType: TextInputType.emailAddress, textAlign: TextAlign.center,
               ),
               RoundTextField(
                 title: 'Password',
                 controller: txtPassword,
                 keyboardType: TextInputType.emailAddress,
-                obscureText: true,
+                obscureText: true, textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,

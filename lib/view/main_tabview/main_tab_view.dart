@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../common/colour_extension.dart';
+import '../add_subscriptions/add_subscription_view.dart';
 import '../calender/calender_view.dart';
 import '../home/home_view.dart';
 import '../spending_budget/spending_budget_view.dart';
@@ -94,13 +95,11 @@ class _MainTabViewState extends State<MainTabView> {
 
                    InkWell(
                      onTap: (){
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=>const AddSubscriptionView()));
 
                      },
                      child: Container(
-                       margin: EdgeInsets.symmetric(vertical: 30),
-                       child: Icon(Icons.radio_button_checked_outlined,size: 70,
-                       color: Colors.blueGrey.shade200,
-                       ),
+                       margin: const EdgeInsets.symmetric(vertical: 30),
                        decoration: BoxDecoration(
                          boxShadow: [BoxShadow(
                            color: TColor.secondary.withOpacity(0.25),
@@ -108,6 +107,9 @@ class _MainTabViewState extends State<MainTabView> {
                            offset: const Offset(0,4)
                          ),],
                          borderRadius: BorderRadius.circular(50),
+                       ),
+                       child: Icon(Icons.radio_button_checked_outlined,size: 70,
+                       color: Colors.blueGrey.shade200,
                        ),
                      ),
                    )
