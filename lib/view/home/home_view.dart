@@ -5,6 +5,7 @@ import '../../common_widget/custom_arc_painter.dart';
 import '../../common_widget/segment_button.dart';
 import '../../common_widget/status_button.dart';
 import '../../common_widget/subscription_home_row.dart';
+import '../subscription_info/subscription_info_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -178,7 +179,10 @@ const SizedBox(height: 20,),
 
                 return SubscriptionHomeRow(
                   sObj: {"Name": name, "icon": icon, "Price": price},
-                  onPressed: () {},
+                  onPressed: () {
+Navigator.push(context, MaterialPageRoute(builder: (context)=> SubscriptionInfoView(sObj:sObj)));
+                    
+                  },
                 );
               },
             ),

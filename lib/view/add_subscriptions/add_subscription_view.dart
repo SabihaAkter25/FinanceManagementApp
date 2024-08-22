@@ -47,7 +47,9 @@ TextEditingController txtDescription = TextEditingController();
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          IconButton(onPressed: (){},
+                          IconButton(onPressed: (){
+                            Navigator.pop(context);
+                          },
                             icon: const Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,size: 30,),),
                         ],
                       ),
