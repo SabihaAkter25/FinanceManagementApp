@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:flutter/material.dart';
 import '../../common_widget/subscription_cell.dart';
+import '../settings/settings_view.dart';
 
 class CalenderView extends StatefulWidget {
   const CalenderView({super.key});
@@ -43,7 +44,7 @@ class _CalenderViewState extends State<CalenderView> {
           SliverToBoxAdapter(
             child: SafeArea(
               child: Container(
-                height: media.width * 1,
+                height: media.width * 1.1,
                 decoration: BoxDecoration(
                   color: Colors.blueGrey.shade800.withOpacity(0.6),
                   borderRadius: const BorderRadius.only(
@@ -52,16 +53,26 @@ class _CalenderViewState extends State<CalenderView> {
                   ),
                 ),
                 child:  Padding(
-                  padding: EdgeInsets.all(6.0),
+                  padding: EdgeInsets.all(15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment:MainAxisAlignment.center,
-                          children: [
-                        Text("Calender", style: TextStyle(color: Colors.grey, fontSize: 18, fontWeight: FontWeight.bold)),
-                      ],
-                      ),
+                     children: [
+                     Stack(children: [
+                       Row(
+                         mainAxisAlignment:MainAxisAlignment.center,
+                         children: [
+                           Text("Calender", style: TextStyle(color: Colors.grey, fontSize: 18, fontWeight: FontWeight.bold)),
+                         ],
+                       ),
+                       Row(children: [
+                         const Spacer(),
+                         IconButton(onPressed: (){
+                           Navigator.push(context, MaterialPageRoute(builder: (context)=>const SettingsView()));
+                         },
+                           icon: const Icon(Icons.settings_suggest_outlined,color: Colors.white,size: 40,),),
+
+                       ],),
+                     ],),
                       SizedBox(height: 25,),
                       Text("Subs\nSchedule", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
 SizedBox(height: 15,),
@@ -69,7 +80,9 @@ SizedBox(height: 15,),
                       Row(
                         mainAxisAlignment:MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("3 Subscription for today", style: TextStyle(color: Colors.grey, fontSize: 18, fontWeight: FontWeight.w600)),
+
+
+                          const Text("3 Subscription for today", style: TextStyle(color: Colors.grey, fontSize: 18, fontWeight: FontWeight.w600)),
                   InkWell(
 
                     onTap:(){

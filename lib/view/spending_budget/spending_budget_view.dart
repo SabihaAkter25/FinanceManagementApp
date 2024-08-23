@@ -9,6 +9,7 @@ import '../../common_widget/custom_arc_painter.dart';
 import '../../common_widget/segment_button.dart';
 import '../../common_widget/status_button.dart';
 import '../../common_widget/subscription_home_row.dart';
+import '../settings/settings_view.dart';
 
 class SpendingBudgetView extends StatefulWidget {
 
@@ -35,7 +36,19 @@ class _HomeViewState extends State<SpendingBudgetView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 140),
+             SizedBox(height: 140,
+            child:  Padding(
+              padding: const EdgeInsets.only(top: 8.0,right: 15),
+              child: Row(children: [
+                const Spacer(),
+                IconButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const SettingsView()));
+                },
+                  icon: const Icon(Icons.settings_suggest_outlined,color: Colors.white,size: 40,),),
+
+              ],),
+            ),
+            ),
 
              Stack(
               alignment: Alignment.bottomCenter,

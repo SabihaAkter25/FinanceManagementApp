@@ -180,14 +180,14 @@ const SizedBox(height:30 ,),
                       SizedBox(height: 4,),
                       Text("\$${amountVal.toStringAsFixed(2)}"
                           ,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
                         ),
 
                       ),
-                      SizedBox(height: 8,),
+                      const SizedBox(height: 8,),
                       Container(
                         width: 150,
                         height: 1,
